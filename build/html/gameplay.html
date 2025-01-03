@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gameplay Module &#8212; Eggroll Game  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Movement Module" href="movement.html" />
+    <link rel="prev" title="Eggroll Game documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="gameplay-module">
+<h1>Gameplay Module<a class="headerlink" href="#gameplay-module" title="Link to this heading">¶</a></h1>
+<p>This module defines the <code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code> class, which manages the gameplay loop, level progression, player input, and game state display.</p>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code> class handles the entire gameplay process, including:</p>
+<ul class="simple">
+<li><p>Initializing the game with a specified level file.</p></li>
+<li><p>Managing player input and validating move directions.</p></li>
+<li><p>Displaying the game state, including the grid, score, and remaining moves.</p></li>
+<li><p>Handling special inputs like restarting the game or returning to the main menu.</p></li>
+<li><p>Calculating the player’s score based on eggs and nests collected.</p></li>
+<li><p>Transitioning between levels and managing end-of-level state.</p></li>
+</ul>
+<dl class="py class" id="module-gameplay">
+<dt class="sig sig-object py" id="gameplay.Game">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gameplay.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gameplay.Game" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages the gameplay loop.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.calculate_score">
+<span class="sig-name descname"><span class="pre">calculate_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#gameplay.Game.calculate_score" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates the current score based on nests collected and eggs removed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.count_eggs_and_nests">
+<span class="sig-name descname"><span class="pre">count_eggs_and_nests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#gameplay.Game.count_eggs_and_nests" title="Link to this definition">¶</a></dt>
+<dd><p>Counts the total number of eggs and nests in the grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.display_game_state">
+<span class="sig-name descname"><span class="pre">display_game_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gameplay.Game.display_game_state" title="Link to this definition">¶</a></dt>
+<dd><p>Displays the current state of the game.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.end_game">
+<span class="sig-name descname"><span class="pre">end_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gameplay.Game.end_game" title="Link to this definition">¶</a></dt>
+<dd><p>Handles end-of-level logic, including transitioning to the next level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.get_player_input">
+<span class="sig-name descname"><span class="pre">get_player_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gameplay.Game.get_player_input" title="Link to this definition">¶</a></dt>
+<dd><p>Gets and validates player input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.handle_special_input">
+<span class="sig-name descname"><span class="pre">handle_special_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#gameplay.Game.handle_special_input" title="Link to this definition">¶</a></dt>
+<dd><p>Handles special input (Restart or Back to Main Menu).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gameplay.Game.play" title="Link to this definition">¶</a></dt>
+<dd><p>Main gameplay loop.</p>
+<p>This method runs the main loop of the game, prompting the player for moves and updating the game state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.play_next_level">
+<span class="sig-name descname"><span class="pre">play_next_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gameplay.Game.play_next_level" title="Link to this definition">¶</a></dt>
+<dd><p>Transitions to the next level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gameplay.Game.restart_game">
+<span class="sig-name descname"><span class="pre">restart_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gameplay.Game.restart_game" title="Link to this definition">¶</a></dt>
+<dd><p>Restarts the current game.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Eggroll Game</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Game Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gameplay Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gameplay.Game"><code class="docutils literal notranslate"><span class="pre">Game</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="movement.html">Movement Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utility Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Menu Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_selection.html">Level Selection Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_manager.html">Level Manager Module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Eggroll Game documentation</a></li>
+      <li>Next: <a href="movement.html" title="next chapter">Movement Module</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Leandro Asunan and Jana Rodriguez.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/gameplay.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

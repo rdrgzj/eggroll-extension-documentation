@@ -1,0 +1,10 @@
+Moves Module
+==============
+
+This module contains movement functions for the game.
+
+.. automodule:: moves
+   :members:
+   :undoc-members:
+   :private-members:
+   :show-inheritance:
