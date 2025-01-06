@@ -1,5 +1,7 @@
 import os
+
 from termcolor import colored
+
 from game import Game
 from instructions import display_mechanics
 from level_selection import play_level
@@ -28,7 +30,10 @@ def get_menu_choice() -> int:
     """
     while True:
         try:
-            choice = int(input(colored('\nEnter your choice: ', 'cyan')))
+            choice = int(input(colored(
+                '\nEnter your choice: ', 'cyan',
+                attrs=['blink']
+                )))
 
             if 1 <= choice <= 4:
                 return choice

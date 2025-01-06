@@ -44,5 +44,5 @@ def display_mechanics() -> None:
     """, 'yellow'))
     input(colored(
         '                 PRESS ENTER TO RETURN TO MAIN MENU.',
-        'green'
+        'green', attrs=['blink']
     ))

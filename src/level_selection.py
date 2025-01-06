@@ -1,5 +1,7 @@
 import os
+
 from termcolor import colored
+
 from game import Game
 from utility import clear_screen, print_game_title, get_level_files
 
@@ -17,7 +19,10 @@ def display_levels() -> None:
             'game folder.',
             'red'
         ))
-        input(colored('Press ENTER to return to main menu.', 'green'))
+        input(colored(
+            'Press ENTER to return to main menu.',
+            'green', attrs=['blink']
+            ))
         return
 
     print_game_title()
@@ -51,7 +56,7 @@ def get_level_choice(levels: list[str]) -> str:
             print(colored(
                 f'Invalid choice. Please enter a NUMBER between 0 and '
                 f'{len(levels)} only.',
-                'red'
+                'red', 
             ))
         else:
             if 1 <= choice <= len(levels):

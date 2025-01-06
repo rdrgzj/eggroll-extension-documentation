@@ -153,7 +153,7 @@ class Game:
         valid moves. This method utilizes the `MovementManager.dirs` for
         valid directions.
         """
-        dir_input = input(colored("\nEnter moves (L/R/F/B): ", 'cyan')).upper()
+        dir_input = input(colored("\nEnter moves (L/R/F/B): ", 'cyan', attrs=['blink'])).upper()
         valid_moves = [
             char for char in dir_input if char in self.move_mgr.dirs
         ]
@@ -272,7 +272,7 @@ class Game:
                     'green'
             )
         )
-        name = input(colored('Enter your name: ', 'cyan'))
+        name = input(colored('Enter your name: ', 'cyan', attrs=['blink']))
         self.leaderboard.update_leaderboard(name, self.player.score)
         self.leaderboard.store_scores()
 
@@ -323,7 +323,9 @@ class Game:
         input.
         """
         while True:
-            choice = input("Enter your choice: ").upper()
+            choice = input(colored(
+                "Enter your choice: ", "cyan", attrs=["blink"]
+                )).upper()
 
             if choice == 'N':
                 self.play_next_level()
@@ -356,5 +358,7 @@ class Game:
                     'magenta'
                 )
             )
-            input(colored('Press ENTER to return to main menu.', 'green'))
+            input(colored(
+                'Press ENTER to return to main menu.', 'green', attrs=['blink']
+                ))
             self.return_to_main_menu()

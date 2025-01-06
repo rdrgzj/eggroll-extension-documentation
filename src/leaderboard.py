@@ -55,7 +55,7 @@ class Leaderboard:
             for name, score in self.scores:
                 file.write(f'{name},{score}\n')
     
-    def display_scores(self):
+    def display_scores(self) -> None:
         """Displays the leaderboard scores after each level.
 
         Prints the leaderboard to the terminal, showing the rank, player name,

@@ -1,7 +1,0 @@
-{
-    "typeCheckingMode": "strict",
-    "include": ["src/**/*.py"],
-    "exclude": ["tests/**/*.py"],
-    "pythonVersion": "3.8"
-  }
-  
