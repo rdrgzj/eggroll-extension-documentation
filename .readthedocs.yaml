@@ -17,6 +17,14 @@ python:
 
 build:
   os: ubuntu-20.04  # we were using windows but read the docs can't build the site without this
+  tools:
+    python: "3.8"
+  build:
+    os: ubuntu-20.04
+    commands:
+      - pip install -r docs/requirements.txt
+      - python -m sphinx docs/ source/
+
 
 # Optionally, but recommended,
 # declare the Python requirements required to build your documentation
