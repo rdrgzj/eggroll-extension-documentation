@@ -11,6 +11,8 @@
 
 ### Eggroll is a fun game where you guide eggs 🥚 into nests 🪺 while avoiding obstacles like frying pans 🍳. It's a game of strategy and careful planning. Are you ready to guide your eggs to safety?
 
+### For other devs, the documentation can be accessed through this link -> [Eggroll Extension Documentation](https://eggroll-extension-documentation.readthedocs.io/en/latest/index.html)
+
 # HOW TO START THE GAME:
 
 1. Ensure Python 3.8 or later is installed on your system. You can download it from [python.org](https://www.python.org/).
@@ -87,13 +89,49 @@
 - After completing a level, you can choose to play the next level, restart, or return to the main menu.
 - If you finish a level but did not fill all the nests, you can only restart the current level or return to the main menu.
 
-## Thank you for playing!
-	
-# DOCUMENTATION 
-Our documentation was generated using `Sphinx` and is hosted on `Read the Docs`.
+### Thank you for playing!
 
-It can be accessed through this link:
-### [Eggroll Extension Documentation](https://eggroll-extension-documentation.readthedocs.io/en/latest/index.html)
+# CODE ORGANIZATION AND ALGORITHM 
+
+## Code Organization
+- The project is modular, with separate modules for each functionality.
+- game.py contains three classes, which were kept together to avoid excessive circular dependencies, as they are interdependent.
+- Classes are used to store stage levels, stage data, player state (scores, moves), and leaderboard data.
+- Some modules, such as utility.py, menu.py, and level_selection.py, do not use classes because most functions are static and do not rely on specific attributes.
+
+## Algorithm
+- The game starts with the main menu, handled by menu.py, supported by modules like game.py, instructions.py, and level_selection.py, which correspond to each menu option.
+- Option (1) "Start Game" loads level 1, progressing to the next level after each puzzle is solved. The level1.in file provides data stored in the Game class and processed for gameplay.
+- Option (2) "Load Level" lets the player choose a level. This functionality is handled by level_selection.py, with level data stored in the levels/ directory.
+- Option (3) "Game Mechanics" displays instructions in the terminal for players who want to review them during gameplay. This is handled by instructions.py.
+- Option (4) "Quit" exits the game by calling the exit() function.
+- During the game, the player can decide whether to restart the level, which reinitializes the stage data, or return to main menu.
+- After each game, the leaderboard is displayed. If the player achieves a high score, they can input their name, and the score is saved in the corresponding leaderboard.txt file in the leaderboard/ directory.
+- Lastly, the player can decide whether to play next game, restart the level, or return to main menu. 
+
+### Here are the details about the files and folders in this repository:
+#### Folders
+- build/: Contains HTML, CSS, and JS files for Sphinx documentation.
+- leaderboard/: Files related to managing and displaying the leaderboard.
+- levels/: Stage or level data files for the game.
+- source/: Contains .rst files for Sphinx documentation.
+#### Source Code
+- game.py: Manages the gameplay mechanics.
+- instructions.py: Provides game instructions.
+- leaderboard.py: Manages leaderboard functionality.
+- level_manager.py: Manages level progression.
+- level_selection.py: Handles level selection interface.
+- menu.py: Controls the main menu. Main entry point of the game.
+- movement.py: Handles movement mechanics.
+- utility.py: Provides helper functions.
+#### Stage Solutions
+- sequences.txt: Stores sequences to solve game stages.
+#### Test Files
+- leveldummy.in: Test data for stage validation.
+- test_movement.py: Unit tests for movement functionality.
+- test_score.py: Unit tests for leaderboard and scoring.
+- test_utils.py: Unit tests for utility functions.
+- unit_tests.py: General unit tests for the project.
 
 # BONUS FEATURES
 
