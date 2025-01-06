@@ -5,7 +5,7 @@ The tests are designed to verify that the game mechanics,
 such as egg counting, scoring, and score finalization, 
 work as expected under different conditions. 
 
-Module Dependencies
+Test Dependencies
 -------------------
 
 - `clear_screen()` from `utility` module
