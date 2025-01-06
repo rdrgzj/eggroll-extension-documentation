@@ -6,7 +6,9 @@ version: 2
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
-   configuration: docs/conf.py
+  builder: html 
+  configuration: docs/conf.py  
+  fail_on_warning: true  
 
 python:
   install:
@@ -20,4 +22,6 @@ build:
     python: "3.8"  
   commands:
     - pip install -r docs/requirements.txt 
-    - python -m sphinx docs/ source/      
+    - python -m sphinx docs/ source/
+    - mkdir -p $READTHEDOCS_OUTPUT/html/
+    - cp -r docs/* $READTHEDOCS_OUTPUT/html/
