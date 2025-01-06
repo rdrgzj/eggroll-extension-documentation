@@ -1,7 +1,9 @@
 Level Selection Module
 ======================
 
-This module handles functionality for option #2 in the main menu. It includes displaying available levels, selecting a level, and starting gameplay for the selected level.
+This module handles functionality for option #2 in the main menu. 
+It includes displaying available levels, selecting a level, and 
+starting gameplay for the selected level.
 
 Module Dependencies
 -------------------

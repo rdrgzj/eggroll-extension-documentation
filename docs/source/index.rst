@@ -8,7 +8,7 @@ Eggroll Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Modules:
 
    game
    instructions
@@ -18,4 +18,13 @@ Eggroll Documentation
    menu
    movement
    utility
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Unit Tests:
+
+   test_movement
+   test_score
+   test_utils
 

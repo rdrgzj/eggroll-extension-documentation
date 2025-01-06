@@ -1,7 +1,9 @@
 Game Module
 ===========
 
-This module manages game logic, initializing level state, player states, and gameplay flow. It integrates level management, movement logic, and utility functions.
+This module manages game logic, initializing level state, 
+player states, and gameplay flow. It integrates level 
+management, movement logic, and utility functions.
 
 Module Dependencies
 -------------------

@@ -1,7 +1,10 @@
 Menu Module
 ===========
 
-This module is the main entry point of the game. It handles the main menu, user input, and actions corresponding to each menu option, such as starting the game, loading a level, showing game mechanics, or quitting the game.
+This module is the main entry point of the game. It handles 
+the main menu, user input, and actions corresponding to 
+each menu option, such as starting the game, loading a 
+level, showing game mechanics, or quitting the game.
 
 Module Dependencies
 -------------------

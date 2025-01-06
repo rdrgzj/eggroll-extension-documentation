@@ -1,9 +1,14 @@
 Level Manager Module
 ====================
 
-This module defines the `LevelManager` class, which handles functionality related to managing game levels. It includes the ability to load level data from files and determine the next level in a sequence.
+This module defines the `LevelManager` class, which handles 
+functionality related to managing game levels. It includes 
+the ability to load level data from files and determine 
+the next level in a sequence.
 
-Level files are expected to be structured with the number of rows, total moves, and a grid representation of the level. Files must also be in `.in` format.
+Level files are expected to be structured with the number 
+of rows, total moves, and a grid representation of the level. 
+Files must also be in `.in` format.
 
 Module Dependencies
 -------------------

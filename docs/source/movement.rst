@@ -1,9 +1,10 @@
 Movement Module
 ===============
 
-This module provides functions for managing egg movements within a grid. 
-The core functionality includes moving eggs in various directions, transforming 
-grid cells, and checking movement validity.
+This module provides functions for managing egg movements 
+within a grid. The functionality includes moving eggs in 
+various directions, transforming grid cells, and checking 
+movement validity.
 
 Module Dependencies
 -------------------

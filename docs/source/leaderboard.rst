@@ -10,6 +10,8 @@ Module Dependencies
 
 **Third-party Libraries**: termcolor
 
+Class(es) and Function(s)
+-------------------------
 
 .. automodule:: leaderboard
    :members:
