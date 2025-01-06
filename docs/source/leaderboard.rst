@@ -1,12 +1,14 @@
 Leaderboard Module
 =====================
 
-Manages leaderboard functionality of the game
+Manages leaderboard functionality of the game.
 
 Module Dependencies
 -------------------
 
-**Built-in Modules**: os, subprocess, sys, time
+**Built-in Modules**: os
+
+**Third-party Libraries**: termcolor
 
 
 .. automodule:: leaderboard

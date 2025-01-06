@@ -5,4 +5,4 @@ sphinx-autodoc-typehints
 
 pyright
 mypy
-pytest
+pytests
