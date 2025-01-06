@@ -1,8 +1,8 @@
+termcolor
 sphinx
 sphinx-rtd-theme
 sphinx-autodoc-typehints
 
 pyright
-termcolor
 mypy
-pytestks
+pytest
