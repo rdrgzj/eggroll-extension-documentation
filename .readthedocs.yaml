@@ -19,5 +19,4 @@ python:
     - requirements: docs/requirements.txt
 
 search:
-    api/*: -1
     changelog/*: 4
