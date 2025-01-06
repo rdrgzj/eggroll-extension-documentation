@@ -17,6 +17,3 @@ python:
       extra_requirements:
         - docs
     - requirements: docs/requirements.txt
-
-search:
-    changelog/*: 4
