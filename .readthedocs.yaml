@@ -14,6 +14,11 @@ python:
       path: .
     - requirements: docs/requirements.txt
 
+build:
+  os: ubuntu-20.04  # we were using windows but read the docs can't build the site without this
+  tools:
+    python: '3.13'
+
 # Optionally, but recommended,
 # declare the Python requirements required to build your documentation
 # See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
