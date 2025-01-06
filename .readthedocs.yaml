@@ -1,27 +1,24 @@
-# Read the Docs configuration file
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
-
-# Required
 version: 2
 
-# Build documentation in the "docs/" directory with Sphinx
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.13"
+
 sphinx:
-  builder: html 
-  configuration: docs/conf.py  
-  fail_on_warning: true  
+  builder: html
+  configuration: docs/source/conf.py
+  fail_on_warning: true
 
 python:
   install:
     - method: pip
       path: .
+      extra_requirements:
+        - docs
     - requirements: docs/requirements.txt
 
-build:
-  os: ubuntu-20.04  # we were using windows but read the docs can't build the site without this
-  tools:
-    python: "3.8"  
-  commands:
-    - pip install -r docs/requirements.txt 
-    - python -m sphinx docs/ source/
-    - mkdir -p $READTHEDOCS_OUTPUT/html/
-    - cp -r docs/* $READTHEDOCS_OUTPUT/html/
+search:
+  ranking:
+    api/*: -1
+    changelog/*: 4
