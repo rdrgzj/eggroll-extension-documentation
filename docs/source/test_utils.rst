@@ -15,7 +15,7 @@ Test Dependencies
 Tests
 -------------------------
 
-.. automodule:: test_movement
+.. automodule:: test_utils
    :members:
    :undoc-members:
    :private-members:
