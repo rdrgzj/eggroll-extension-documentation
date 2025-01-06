@@ -17,7 +17,7 @@ python:
 build:
   os: ubuntu-20.04  # we were using windows but read the docs can build the site without this
   tools:
-    - sphinx
+    sphinx:
   commands:
     - make html
 
