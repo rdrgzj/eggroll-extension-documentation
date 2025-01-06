@@ -17,15 +17,15 @@ setup(
     ],
     extras_require={
         'docs': [
-            'sphinx==8.1.3',
-            'sphinx-rtd-theme==3.0.2',
+            'sphinx',
+            'sphinx-rtd-theme=',
             'sphinx-autodoc-typehints',
         ],
         'dev': [
-            'pyright==1.1.375',
-            'termcolor==2.5.0',
-            'mypy==1.14.1',
-            'pytest==8.3.4',
+            'pyright',
+            'termcolor',
+            'mypy',
+            'pytest',
         ],
     }
 )
