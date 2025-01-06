@@ -20,12 +20,7 @@ setup(
             'sphinx',
             'sphinx-rtd-theme',
             'sphinx-autodoc-typehints',
-        ],
-        'dev': [
-            'pyright',
-            'termcolor',
-            'mypy',
-            'pytest',
+            'termcolor>=1.1.0',
         ],
     }
 )
