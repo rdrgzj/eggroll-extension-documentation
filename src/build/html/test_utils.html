@@ -41,29 +41,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="game.html">Game Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="leaderboard.html">Leaderboard Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="level_manager.html">Level Manager Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="level_selection.html">Level Selection Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="menu.html">Menu Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="movement.html">Movement Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utility.html">Utility Module</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit Tests:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Unit Tests:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="test_movement.html">Movement Test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_score.html">Scoring Test</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Utility Test</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#test-dependencies">Test Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-test_movement">Tests</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#test_movement.test_contd_moves"><code class="docutils literal notranslate"><span class="pre">test_contd_moves()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test_movement.test_egg_coordses"><code class="docutils literal notranslate"><span class="pre">test_egg_coordses()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test_movement.test_single_moves"><code class="docutils literal notranslate"><span class="pre">test_single_moves()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test_movement.test_transform_cell_for_egg_movement"><code class="docutils literal notranslate"><span class="pre">test_transform_cell_for_egg_movement()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test_movement.test_truth_condition"><code class="docutils literal notranslate"><span class="pre">test_truth_condition()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-test_utils">Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test_utils.test_degridder"><code class="docutils literal notranslate"><span class="pre">test_degridder()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test_utils.test_leaderboard"><code class="docutils literal notranslate"><span class="pre">test_leaderboard()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test_utils.test_lvl_mgr"><code class="docutils literal notranslate"><span class="pre">test_lvl_mgr()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -107,51 +94,34 @@ functionality, and level progression.</p>
 <li><p><cite>LevelManager</cite> class from <cite>level_manager</cite> module</p></li>
 </ul>
 </section>
-<section id="module-test_movement">
-<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-test_movement" title="Link to this heading"></a></h2>
+<section id="module-test_utils">
+<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-test_utils" title="Link to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="test_movement.test_contd_moves">
-<span class="sig-prename descclassname"><span class="pre">test_movement.</span></span><span class="sig-name descname"><span class="pre">test_contd_moves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_movement.test_contd_moves" title="Link to this definition"></a></dt>
-<dd><p>Tests the <cite>move_until_blocked()</cite> method for the 
-<cite>MovementManager</cite> class; to reproduce, either call an 
-assertion using the method within this function or create a 
-try-except block if expecting for exceptions.</p>
+<dt class="sig sig-object py" id="test_utils.test_degridder">
+<span class="sig-prename descclassname"><span class="pre">test_utils.</span></span><span class="sig-name descname"><span class="pre">test_degridder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_utils.test_degridder" title="Link to this definition"></a></dt>
+<dd><p>Tests the <cite>utility</cite> function <cite>degridder()</cite>; to reproduce 
+unit tests for this function, call <cite>da(grid)</cite> inside this 
+function, where <cite>grid</cite> is the desired grid to be displayed.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test_movement.test_egg_coordses">
-<span class="sig-prename descclassname"><span class="pre">test_movement.</span></span><span class="sig-name descname"><span class="pre">test_egg_coordses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_movement.test_egg_coordses" title="Link to this definition"></a></dt>
-<dd><p>Tests the <cite>egg_coords()</cite>, <cite>egg_coords_b()</cite> and <cite>egg_coords_r()</cite> 
-methods for the <cite>MovementManager</cite> class; to reproduce, call an 
-assertion using the method/s within this function.</p>
+<dt class="sig sig-object py" id="test_utils.test_leaderboard">
+<span class="sig-prename descclassname"><span class="pre">test_utils.</span></span><span class="sig-name descname"><span class="pre">test_leaderboard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_utils.test_leaderboard" title="Link to this definition"></a></dt>
+<dd><p>Tests the <cite>load_scores()</cite>, <cite>update_leaderboard()</cite> 
+and <cite>store_scores()</cite> methods for the <cite>Leaderboard</cite> 
+class; to reproduce, alter <cite>leaderboard0.txt</cite> in
+the <cite>leaderboard</cite> directory and the <cite>initial</cite> and/or 
+<cite>new(er)_scores</cite> list inside this function however 
+you wish and assert any changes accordingly.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test_movement.test_single_moves">
-<span class="sig-prename descclassname"><span class="pre">test_movement.</span></span><span class="sig-name descname"><span class="pre">test_single_moves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_movement.test_single_moves" title="Link to this definition"></a></dt>
-<dd><p>Tests the singular <cite>move_down()</cite>, <cite>move_left()</cite>, <cite>move_up()</cite> 
-and <cite>move_right()</cite> methods, as well as tests the unifying 
-<cite>move_eggs()</cite> method for the <cite>MovementManager</cite> class; to 
-reproduce, either call an assertion using the method within 
-this function or create a try-except block if expecting for 
-exceptions.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="test_movement.test_transform_cell_for_egg_movement">
-<span class="sig-prename descclassname"><span class="pre">test_movement.</span></span><span class="sig-name descname"><span class="pre">test_transform_cell_for_egg_movement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_movement.test_transform_cell_for_egg_movement" title="Link to this definition"></a></dt>
-<dd><p>Tests the <cite>transform_cell_for_egg_movement()</cite> for the 
-<cite>MovementManager</cite> class; to reproduce, call an assertion using 
-the method within this function.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="test_movement.test_truth_condition">
-<span class="sig-prename descclassname"><span class="pre">test_movement.</span></span><span class="sig-name descname"><span class="pre">test_truth_condition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_movement.test_truth_condition" title="Link to this definition"></a></dt>
-<dd><p>Tests the <cite>can_move()</cite> method for the <cite>MovementManager</cite> class; 
-to reproduce, either call an assertion using the method 
-within this function or create a try-except block if 
-expecting for exceptions.</p>
+<dt class="sig sig-object py" id="test_utils.test_lvl_mgr">
+<span class="sig-prename descclassname"><span class="pre">test_utils.</span></span><span class="sig-name descname"><span class="pre">test_lvl_mgr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#test_utils.test_lvl_mgr" title="Link to this definition"></a></dt>
+<dd><p>Tests the <cite>utility</cite> function <cite>get_level_files()</cite>
+and the <cite>get_next_level()</cite> method for the 
+<cite>LevelManager</cite> class; non-reproducible as it uses
+the pre-made levels to test.</p>
 </dd></dl>
 
 </section>

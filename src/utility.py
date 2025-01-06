@@ -43,5 +43,7 @@ def get_level_files() -> list[str]:
     The level files should be named starting with "level", the level number,
     and ending with ".in".
     """
-    levels_dir = os.path.abspath('levels') 
-    return [f for f in os.listdir(levels_dir) if f.startswith('level') and f.endswith('.in')]
+    return [
+        f for f in os.listdir('levels')
+        if f.startswith('level') and f.endswith('.in')
+    ]
