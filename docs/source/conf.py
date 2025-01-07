@@ -8,7 +8,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../'))
+sys.path.insert(0, os.path.abspath(''../../src''))
 
 project = 'Eggroll'
 copyright = '2025, Leandro Asunan and Jana Rodriguez'
@@ -23,7 +23,6 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns: list[str] = []
-suppress_warnings = ['autodoc.import_object']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
