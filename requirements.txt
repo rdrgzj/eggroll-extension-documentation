@@ -6,3 +6,7 @@ sphinx-autodoc-typehints
 pyright
 mypy
 pytest
+
+
+
+https://github.com/UPD-CS12-242/mvu-canvas-sample
